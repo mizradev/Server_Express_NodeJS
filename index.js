@@ -1,5 +1,10 @@
-const http = require('http')
+// importacion de express 
+const express = require('express')
+// se realiza la instancia de Express
+const app = express()
 
-http.createServer((req, res)=>{
-    res.end('Hola mundo')
-}).listen(3000)
+app.get('/',(req,res)=>{
+    res.end('HOla MUndo con Express')
+})
+
+app.listen(3000,()=>{console.log('Run Server on http://localhost:3000')})
